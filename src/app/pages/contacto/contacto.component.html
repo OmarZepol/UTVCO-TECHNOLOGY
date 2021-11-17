@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-lg navbar nav navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand letra" href="#">UTVCO TECHNOLOGY <img src="./../../../assets/images/halcona.png" alt="" height="35px"><img src="./../../../assets/images/halcon.png" alt="" height="35px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav alineado">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="inicio"><i class="fas fa-home"></i> Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cursos"><i class="fas fa-graduation-cap"></i> Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto"><i class="fas fa-address-book"></i> Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container textos">
+
+    <h2>FORMULARIO DE CONTACTO</h2>
+    <hr>
+    <p>Para recibir mayor informacion de un servicio favor de dejar tus datos asi como la informacion solicitada en el siguiente formulario y a la brevedad nos pondremos en contacto contigo.</p>
+    <hr>
+    <form [formGroup]="solicitud" (ngSubmit)="Agregar()">
+        <div>
+
+            <div class="form-group row p-2">
+                <label class="col-3 col-form-label">Nombre</label>
+                <div class="col-8">
+                    <input class="form-control" type="text" name="nombre" placeholder="Nombre" formControlName="nombre" [class.is-invalid]="solicitud.get('nombre')?.invalid && solicitud.get('nombre')?.touched">
+                    <small *ngIf="solicitud.get('nombre')?.invalid && solicitud.get('nombre')?.touched" class="form-text text-danger">Este es un campo obligatorio</small>
+                </div>
+            </div>
+
+            <div class="form-group row p-2">
+                <label class="col-3 col-form-label">Email</label>
+                <div class="col-8">
+                    <input class="form-control" type="text" name="email" placeholder="Email" formControlName="email" [class.is-invalid]="solicitud.get('email')?.invalid && solicitud.get('email')?.touched">
+                    <small *ngIf="solicitud.get('email')?.invalid && solicitud.get('email')?.touched" class="form-text text-danger">Este es un campo obligatorio</small>
+                </div>
+            </div>
+
+            <div class="form-group row p-2">
+                <label class="col-3 col-form-label">Teléfono</label>
+                <div class="col-8">
+                    <input class="form-control" type="tel" name="telefono" placeholder="Teléfono" formControlName="telefono" [class.is-invalid]="solicitud.get('telefono')?.invalid && solicitud.get('telefono')?.touched">
+                    <small *ngIf="solicitud.get('telefono')?.invalid && solicitud.get('telefono')?.touched" class="form-text text-danger">Este es un campo obligatorio</small>
+                </div>
+            </div>
+
+            <div class="form-group row p-2">
+                <label class="col-3 col-form-label">Asunto</label>
+                <div class="col-8">
+                    <input class="form-control" type="text" name="asunto" placeholder="Asunto" formControlName="asunto" [class.is-invalid]="solicitud.get('asunto')?.invalid && solicitud.get('asunto')?.touched">
+                    <small *ngIf="solicitud.get('asunto')?.invalid && solicitud.get('asunto')?.touched" class="form-text text-danger">Este es un campo obligatorio</small>
+                </div>
+            </div>
+
+            <div class="form-group row p-2">
+                <label class="col-3 col-form-label">Descripcion</label>
+                <div class="col-8">
+                    <textarea class="form-control" type="text" name="descripcion" placeholder="Descripción" formControlName="descripcion" [class.is-invalid]="solicitud.get('descripcion')?.invalid && solicitud.get('descripcion')?.touched"></textarea>
+                    <small *ngIf="solicitud.get('descripcion')?.invalid && solicitud.get('descripcion')?.touched" class="form-text text-danger">Este es un campo obligatorio</small>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-2 col-form-label">&nbsp;</label>
+                <div class="input-group col-md-8">
+                    <button [disabled]="solicitud.invalid" class="btn btn-primary boton btn-block" type="submit">
+                        Eviar <i class="far fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>

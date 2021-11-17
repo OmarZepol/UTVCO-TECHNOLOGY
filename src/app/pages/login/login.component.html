@@ -1,0 +1,32 @@
+<div id="login">
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-4">
+                <div id="login-box" class="col-md-12 superior">
+                    <form id="login-form" [formGroup]="log" (ngSubmit)="loginUser()" class="form" action="" method="post">
+                        <h3 class="text-center text-white">Iniciar sesión</h3>
+                        <div class="form-group">
+                            <label for="username" class="text-white">Email:</label><br>
+                            <input class="form-control" name="email" type="email" placeholder="Email" formControlName="email">
+                            <small *ngIf="log.get('email')?.invalid && log.get('email')?.touched" class="form-text text-danger">Este es un campo obligatorio</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="text-white">Contraseña:</label><br>
+                            <input class="form-control" name="password" type="password" placeholder="****" formControlName="password">
+                            <small *ngIf="log.get('password')?.invalid && log.get('password')?.touched" class="form-text text-danger">Este es un campo obligatorio</small>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <button class="btn btn-info btn-md text-white alinear" type="submit" [disabled]="log.invalid">Ingresar <i class="far fa-user"></i></button>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-link"><a href="registro">Registrar </a></button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

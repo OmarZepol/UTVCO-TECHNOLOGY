@@ -1,0 +1,17 @@
+h1 {
+    color: white;
+}
+
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.justificar {
+    text-align: justify;
+}

@@ -1,0 +1,73 @@
+<div class="container textos">
+    <br>
+    <h2>Registro</h2>
+    <hr>
+    <p>Nos da gusto que te unas a la familia UTVCO TECHNOLOGY para poder visualizar la informacion es necesario registrarse</p>
+    <hr>
+    <form [formGroup]="registro" (ngSubmit)="Registrar()">
+        <div>
+
+            <div class="form-group row p-2">
+                <label class="col-3 col-form-label">Nombre</label>
+                <div class="col-8">
+                    <input class="form-control" type="text" name="nombre" placeholder="Nombre" formControlName="nombre" [class.is-invalid]="registro.get('nombre')?.invalid && registro.get('nombre')?.touched">
+                    <small *ngIf="registro.get('nombre')?.invalid && registro.get('nombre')?.touched" class="form-text text-danger">Este es un campo obligatorio</small>
+                </div>
+            </div>
+
+            <div class="form-group row p-2">
+                <label class="col-3 col-form-label">Apellido Paterno</label>
+                <div class="col-8">
+                    <input class="form-control" type="text" name="ape_p" placeholder="Apellido Paterno" formControlName="ape_p" [class.is-invalid]="registro.get('ape_p')?.invalid && registro.get('ape_p')?.touched">
+                    <small *ngIf="registro.get('ape_p')?.invalid && registro.get('ape_p')?.touched" class="form-text text-danger">Este es un campo obligatorio</small>
+                </div>
+            </div>
+
+            <div class="form-group row p-2">
+                <label class="col-3 col-form-label">Apellido Materno</label>
+                <div class="col-8">
+                    <input class="form-control" type="text" name="ape_m" placeholder="Apellido Materno" formControlName="ape_m" [class.is-invalid]="registro.get('ape_m')?.invalid && registro.get('ape_m')?.touched">
+                    <small *ngIf="registro.get('ape_m')?.invalid && registro.get('ape_m')?.touched" class="form-text text-danger">Este es un campo obligatorio</small>
+                </div>
+            </div>
+
+            <div class="form-group row p-2">
+                <label class="col-3 col-form-label">Email</label>
+                <div class="col-8">
+                    <input class="form-control" type="text" name="email" placeholder="Email" formControlName="email" [class.is-invalid]="registro.get('email')?.invalid && registro.get('email')?.touched">
+                    <small *ngIf="registro.get('email')?.invalid && registro.get('email')?.touched" class="form-text text-danger">Este es un campo obligatorio</small>
+                </div>
+            </div>
+
+            <div class="form-group row p-2">
+                <label class="col-3 col-form-label">Contraseña</label>
+                <div class="col-8">
+                    <input class="form-control" type="password" name="password" placeholder="****" formControlName="password" [class.is-invalid]="registro.get('password')?.invalid && registro.get('password')?.touched">
+                    <small *ngIf="registro.get('password')?.invalid && registro.get('password')?.touched" class="form-text text-danger">Este es un campo obligatorio</small>
+                </div>
+            </div>
+
+            <div class="form-group row p-2">
+                <label class="col-3 col-form-label">Teléfono</label>
+                <div class="col-8">
+                    <input class="form-control" type="tel" name="telefono" placeholder="Teléfono" formControlName="telefono" [class.is-invalid]="registro.get('telefono')?.invalid && registro.get('telefono')?.touched">
+                    <small *ngIf="registro.get('telefono')?.invalid && registro.get('telefono')?.touched" class="form-text text-danger">Este es un campo obligatorio</small>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-2 col-form-label">&nbsp;</label>
+                <div class="input-group col-md-8">
+                    <button [disabled]="registro.invalid" class="btn btn-primary btn-block" type="submit">
+                        Registrar <i class="far fa-id-badge"></i>
+                    </button>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <button type="button" class="btn btn-link"><a href="login">Ingresar </a></button>
+            </div>
+
+        </div>
+    </form>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Solicitud } from '../../models/solicitud';
 import { SolicitudService } from 'src/app/services/solicitud.service';
@@ -17,6 +17,8 @@ export class ContactoComponent implements OnInit {
     asunto: '',
     descripcion: '',
   };
+
+  installEvent = null;
 
   solicitud;
 
@@ -40,6 +42,23 @@ export class ContactoComponent implements OnInit {
     this.toastrSvc.success(`Enviado correctamente`, 'UTVCO TECHNOLOGY');
 
     this.solicitud.reset();
+  }
+
+  @HostListener('window:beforeinstallprompt', ['$event'])
+  onBeforeInstallPrompt(event: Event){
+    console.log(event);
+    event.preventDefault();
+    this.installEvent= event;
+  }
+
+  installByUser() {
+    if (this.installEvent) {
+      this.installEvent.prompt();
+      this.installEvent.userChoice
+      .then(rta=>{
+        console.log(rta);
+      });
+    }
   }
 
 

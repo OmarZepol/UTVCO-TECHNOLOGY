@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1638659818077,
+  "timestamp": 1638660645972,
   "index": "https://OmarZepol.github.io/utvco-technology/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://OmarZepol.github.io/utvco-technology/favicon.ico",
         "https://OmarZepol.github.io/utvco-technology/index.html",
-        "https://OmarZepol.github.io/utvco-technology/main.e5fe99d06cc04ea1d51c.js",
+        "https://OmarZepol.github.io/utvco-technology/main.1d388db72ca2013d601f.js",
         "https://OmarZepol.github.io/utvco-technology/manifest.webmanifest",
         "https://OmarZepol.github.io/utvco-technology/polyfills.8c151b8375e767ff858f.js",
         "https://OmarZepol.github.io/utvco-technology/runtime.0e49e2b53282f40c8925.js",
@@ -56,8 +56,8 @@
     "https://OmarZepol.github.io/utvco-technology/assets/images/halcon.png": "f7d13c57d5245ad6a2ae77f9dbdfb9144abeebca",
     "https://OmarZepol.github.io/utvco-technology/assets/images/halcona.png": "b75e6ac6e11629e3279b7e10d3433990246e8c0e",
     "https://OmarZepol.github.io/utvco-technology/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://OmarZepol.github.io/utvco-technology/index.html": "660b64a5bef56e1b209fb9f0c81d13d8d4af0a77",
-    "https://OmarZepol.github.io/utvco-technology/main.e5fe99d06cc04ea1d51c.js": "8c9ecc5874ee764906e1980823d54b9b548f8fef",
+    "https://OmarZepol.github.io/utvco-technology/index.html": "ab0beb4b673e0d792ddb83696a632c17eaa8efd2",
+    "https://OmarZepol.github.io/utvco-technology/main.1d388db72ca2013d601f.js": "ec248a3fd11c2792445619e7c6a73e084c3fbe8a",
     "https://OmarZepol.github.io/utvco-technology/manifest.webmanifest": "5697112c0aee0c7605e81ab40861ac25c8be9ebd",
     "https://OmarZepol.github.io/utvco-technology/polyfills.8c151b8375e767ff858f.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
     "https://OmarZepol.github.io/utvco-technology/runtime.0e49e2b53282f40c8925.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",

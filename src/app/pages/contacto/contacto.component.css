@@ -12,6 +12,10 @@ p {
     left: 50%;
 }
 
-.textos {
-    color: white;
+.alineado {
+    text-align: center;
+}
+
+.jalarderecha {
+    margin-right: 3%;
 }

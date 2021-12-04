@@ -6,3 +6,11 @@
     cursor: pointer;
     background-color: turquoise;
 }
+
+.alineado {
+    text-align: center;
+}
+
+.jalarderecha {
+    margin-right: 3%;
+}
